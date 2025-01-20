@@ -25,20 +25,20 @@ function App() {
         <div className="market-item">
             <div className="market-title">NIFTY</div>
             <div className="market-value" style={{color: '#a54060cf', fontWeight: '550'}}>
-                23,532.30 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>-26.75 (-0.11%)</span>
+                23,343.70 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>+140.50 (+0.61%)</span>
             </div>
         </div>
         <div className="market-item">
             <div className="market-title">BANKNIFTY</div>
             <div className="market-value" style={{color: '#1e8121e1' , fontWeight: '550'}}>
-                50,262.95 <span className="market-change" style={{color: '#666666f0' , fontWeight: '100'}}>+174.60 (+0.35%)</span>
+                49,413.20 <span className="market-change" style={{color: '#666666f0' , fontWeight: '100'}}>+872.60 (+1.80%)</span>
             </div>
         </div>
 
         <div className="market-item">
             <div className="market-title">FINNIFTY</div>
-            <div className="market-value">
-                23,664.85 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>-282.95 (-1.18%)</span>
+            <div className="market-value" style={{color: '#1e8121e1', fontWeight: '550'}}>
+                22,936.10 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>+327.90 (+1.45%)</span>
             </div>
         </div>
     </div>
@@ -52,19 +52,19 @@ function App() {
     <div className="position-card">
         <div className="d-flex justify-content-between">
             <div>
-                <div className="position-title">BANKNIFTY <span style={{fontSize: '13px'}}>27-Nov-24</span> 50100 CE</div>
-                <div className="position-details">133 Lots • <span className="tag">CF</span></div>
-                <div className="position-details">Buy 676.80</div>
+                <div className="position-title">SENSEX <span style={{fontSize: '13px'}}>21-Jan-25</span> 77000 CE</div>
+                <div className="position-details">500 Lots • <span className="tag">CF</span></div>
+                <div className="position-details">Buy 228.68</div>
             </div>
             <div className="text-end">
-                <div className="profit">+2,66,831.25</div>
-                <div className="ltp-value">LTP 721.45 (1.51%)</div>
-                <div className="position-details">Sell 810.55</div>
+                <div className="profit">+16,15,600.00</div>
+                <div className="ltp-value">LTP 388.50 (56.40%)</div>
+                <div className="position-details">Sell 390.24</div>
             </div>
         </div>
     </div>
 
-    <div className="position-card">
+    {/* <div className="position-card">
         <div className="d-flex justify-content-between">
             <div>
                 <div className="position-title">NIFTY 31-Oct-24 24550 PE</div>
@@ -90,7 +90,7 @@ function App() {
                 <i className="fas fa-chevron-up ms-2"></i>
             </div>
         </div>
-    </div>
+    </div> */}
 
     <div className="bottom-nav">
         <div className="d-flex justify-content-around">
