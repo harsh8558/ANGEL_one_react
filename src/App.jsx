@@ -24,7 +24,7 @@ function App() {
     <div className="market-data-container">
         <div className="market-item">
             <div className="market-title">NIFTY</div>
-            <div className="market-value" style={{color: '#a54060cf', fontWeight: '550'}}>
+            <div className="market-value" style={{color: '#1e8121e1', fontWeight: '550'}}>
                 23,343.70 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>+140.50 (+0.61%)</span>
             </div>
         </div>
