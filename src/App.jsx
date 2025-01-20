@@ -52,14 +52,14 @@ function App() {
     <div className="position-card">
         <div className="d-flex justify-content-between">
             <div>
-                <div className="position-title">SENSEX <span style={{fontSize: '13px'}}>21-Jan-25</span> 77000 CE</div>
-                <div className="position-details">500 Lots • <span className="tag">CF</span></div>
-                <div className="position-details">Buy 228.68</div>
+                <div className="position-title">SENSEX <span style={{fontSize: '13px'}}>21-Jan-25</span> 76700 CE</div>
+                <div className="position-details">325 Lots • <span className="tag">CF</span></div>
+                <div className="position-details">Buy 362.52</div>
             </div>
             <div className="text-end">
-                <div className="profit">+16,15,600.00</div>
+                <div className="profit">+18,03,620.00</div>
                 <div className="ltp-value">LTP 388.50 (56.40%)</div>
-                <div className="position-details">Sell 390.24</div>
+                <div className="position-details">Sell 640.00</div>
             </div>
         </div>
     </div>
