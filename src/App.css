@@ -1,0 +1,450 @@
+ 
+        /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap'); */
+
+        /* exteral fot stle */
+        .barlow-thin {
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.barlow-extralight {
+  font-family: "Barlow", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.barlow-light {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-regular {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barlow-medium {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-semibold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.barlow-bold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.barlow-extrabold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.barlow-black {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.barlow-thin-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.barlow-extralight-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.barlow-light-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.barlow-regular-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.barlow-medium-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.barlow-semibold-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.barlow-bold-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.barlow-extrabold-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.barlow-black-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+        :root {
+            --primary-text: #1a1a1a;
+            --secondary-text: #666666;
+            --light-text: #999999;
+            --profit-green: #4CAF50;
+            --loss-red: #FF5252;
+            --border-color: #eef0f2;
+            --card-bg: #ffffff;
+            --main-bg: #ffffff;
+            --active-blue: #1E88E5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--primary-text);
+            line-height: 1.4;
+        }
+
+        .header-container {
+            background-color:#f3f1f1bd;
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 3.6rem;
+            
+        }
+
+        .header-tabs {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .header-tabs span {
+            color: var(--secondary-text);
+            margin-right: 24px;
+            cursor: pointer;
+        }
+
+        .header-tabs span.active {
+            color: var(--primary-text);
+            font-weight: 540;
+        }
+
+        /* market-container */
+
+        .market-data-container {
+            background-color: #f3f1f1bd;
+            padding: 0px;
+            border-bottom: 0px solid var(--border-color);
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .market-data-container::-webkit-scrollbar {
+            display: none;
+            /* margin-left: 25px; */
+        }
+
+        .market-item {
+            padding: 6px 16px;
+            border: 1.2px solid var(--border-color);
+            border-radius: 0px;
+            margin-right: 0px;
+            min-width: max-content;
+            background-color: var(--card-bg);
+        }
+
+        .market-title {
+            font-size: 13px;
+            color: var(--secondary-text);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .market-value {
+            font-size: 13px;
+            font-weight: 600;
+            color: #a54060cf;
+        }
+        .market-change {
+            color: #999999;
+        }
+
+        /* Responsive Sort Icon */
+        .sort-icon-container {
+            width: 100%;
+            height: 4.2rem;
+            display: flex;
+            align-items: center;
+            justify-content:left;
+            padding: clamp(10px, 3vw, 15px) 0;
+            margin-left:17px;
+        }
+
+
+        /* short container */
+        .sort-icon {
+            width: clamp(17px, 5vw, 19px);
+            height: clamp(13px, 4vw, 18px);
+        }
+
+        /* /****************?/ */
+        .market-change {
+            color: var(--loss-red);
+        }
+
+        .position-card {
+            background-color: var(--card-bg);
+            padding: 12px;
+            border-bottom: 2px solid var(--border-color);
+            margin-left: 6px;
+        }
+
+        .position-title {
+            font-size: 15px;
+            font-weight: 100;
+            color:#9a9b9d;
+            margin-bottom: 4px;
+        }
+
+        .position-details {
+            font-size: 13px;
+            color:#a0a0a0b3;
+            margin-bottom: 2px;
+        }
+
+        .profit {
+            color:#8dccbb;
+            font-weight: 450;
+            font-size: 15px;
+        }
+
+        .loss {
+            color:#dc537e65;
+            font-weight: 450;
+        }
+
+        .ltp-value {
+            font-size: 14px;
+            color:#a0a0a0b3;
+            margin: 4px 0;
+        }
+
+        /* CF icon */
+        .tag {
+    background: #f3f4f69a;
+    padding: 2px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #a0a0a0b3;
+  }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 8px 0;
+            z-index: 1000;
+        }
+
+        .nav-item {
+            color: var(--secondary-text);
+            text-decoration: none;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-item i {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .nav-item.active {
+            color: var(--active-blue);
+        }
+
+        .total-section {
+            background-color: var(--card-bg);
+            padding: 16px;
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            border-top: 1px solid var(--border-color);
+            font-size: 15px;
+        }
+
+        .icon-button {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--main-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8px;
+            color: var(--secondary-text);
+        }
+
+        @media (max-width: 375px) {
+            .header-tabs {
+                font-size: 16px;
+            }
+            
+            .market-title {
+                font-size: 12px;
+            }
+            
+            .market-value {
+                font-size: 13px;
+            }
+            
+            .position-title {
+                font-size: 14px;
+            }
+        }
+
+           /* Media Queries for Different Screen Sizes */
+           @media screen and (max-width: 320px) {
+            .header-tabs {
+                font-size: 0.9rem;
+            }
+            
+            .icon-button {
+                width: 28px;
+                height: 28px;
+            }
+
+            .position-title {
+                font-size: 0.85rem;
+            }
+
+            .position-details {
+                font-size: 0.7rem;
+            }
+
+            .nav-item {
+                font-size: 0.6rem;
+            }
+
+            .nav-item i {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (min-width: 321px) and (max-width: 375px) {
+            .header-container {
+                padding: 12px 15px;
+            }
+
+            .position-card {
+                padding: 12px;
+            }
+        }
+
+        @media screen and (min-width: 376px) and (max-width: 425px) {
+            .header-container {
+                padding: 14px 18px;
+            }
+
+            .market-data {
+                padding: 12px 18px;
+            }
+        }
+
+        /* Landscape Mode Adjustments */
+        @media screen and (max-height: 450px) and (orientation: landscape) {
+            body {
+                padding-bottom: 50px;
+            }
+
+            .total-section {
+                bottom: 40px;
+            }
+
+            .bottom-nav {
+                padding: 4px 0;
+            }
+
+            .nav-item i {
+                font-size: 1rem;
+                margin-bottom: 2px;
+            }
+
+            .nav-item span {
+                font-size: 0.6rem;
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) {
+            .nav-item:active {
+                opacity: 0.7;
+            }
+
+            .icon-button:active {
+                background-color: #f5f5f5;
+            }
+        }
+
+        /* High DPI Screen Optimizations */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .border-hairline {
+                border-width: 0.5px;
+            }
+        }
+
+        /* Safe Area Insets for Notched Phones */
+        @supports (padding: max(0px)) {
+            .header-container {
+                padding-top: max(15px, env(safe-area-inset-top));
+                padding-left: max(15px, env(safe-area-inset-left));
+                padding-right: max(15px, env(safe-area-inset-right));
+            }
+
+            .bottom-nav {
+                padding-bottom: max(8px, env(safe-area-inset-bottom));
+            }
+        }
+ 
