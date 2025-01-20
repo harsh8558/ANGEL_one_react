@@ -25,20 +25,20 @@ function App() {
         <div className="market-item">
             <div className="market-title">NIFTY</div>
             <div className="market-value" style={{color: '#1e8121e1', fontWeight: '550'}}>
-                23,343.70 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>+140.50 (+0.61%)</span>
+                23,344.75 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>+141.55 (+0.61%)</span>
             </div>
         </div>
         <div className="market-item">
             <div className="market-title">BANKNIFTY</div>
             <div className="market-value" style={{color: '#1e8121e1' , fontWeight: '550'}}>
-                49,413.20 <span className="market-change" style={{color: '#666666f0' , fontWeight: '100'}}>+872.60 (+1.80%)</span>
+                49,350.80 <span className="market-change" style={{color: '#666666f0' , fontWeight: '100'}}>+810.20 (+1.67%)</span>
             </div>
         </div>
 
         <div className="market-item">
             <div className="market-title">FINNIFTY</div>
             <div className="market-value" style={{color: '#1e8121e1', fontWeight: '550'}}>
-                22,936.10 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>+327.90 (+1.45%)</span>
+                22,926.70 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>+318.50 (+1.41%)</span>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@ function App() {
             </div>
             <div className="text-end">
                 <div className="profit">+18,03,620.00</div>
-                <div className="ltp-value">LTP 388.50 (56.40%)</div>
+                <div className="ltp-value">LTP 485.60 (26.60%)</div>
                 <div className="position-details">Sell 640.00</div>
             </div>
         </div>
