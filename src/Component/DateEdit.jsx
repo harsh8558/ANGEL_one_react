@@ -22,6 +22,7 @@ const DateEdit = ({ formattedDate, setFormattedDate }) => {
 
   return (
     <div>
+      <label className="text-[14px]">Date</label>
       <input 
         type="date"
         className="border-2 p-1  rounded-md shadow-md focus:outline-none focus:bg-green-100" 
