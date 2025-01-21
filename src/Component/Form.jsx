@@ -224,7 +224,7 @@ const Form=(
     <label className="bg-gray-400 text-black rounded-md p-2 w-1/3 text-center">ORDER</label>
     <div className="flex flex-col gap-2 w-1/2">
     <select 
-      className="border-2 p-1 w-1/2 rounded-md shadow-md focus:outline-none focus:bg-green-100"
+      className="border-2 p-1 w-2/3 rounded-md shadow-md focus:outline-none focus:bg-green-100"
       value={selectedIndex} 
       onChange={(e)=>setSelectedIndex(e.target.value)}>
         <option value="">-- Select --</option>

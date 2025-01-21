@@ -24,7 +24,7 @@ const DateEdit = ({ formattedDate, setFormattedDate }) => {
     <div>
       <input 
         type="date"
-        className="w-full" 
+        className="border-2 p-1  rounded-md shadow-md focus:outline-none focus:bg-green-100" 
         onChange={handleChange} />
     </div>
   );
