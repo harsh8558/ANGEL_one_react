@@ -54,7 +54,7 @@ const Form=(
   
   return(<>
   
-  <form className="flex flex-col gap-2 p-2 bg-blue-300/15">
+  <form className="flex flex-col gap-2 p-2 bg-amber-200/15 pb-4">
   <h1 className="text-center mt-3 text-2xl font-bold">EDIT FORM</h1><br/>
     <label className="bg-gray-400 text-black rounded-md p-2 w-1/4">SENSEX</label>
     <input 
@@ -282,6 +282,7 @@ const Form=(
       />
     </div>
   </form>
+  <p className="text-center text-[12px]">Designed & Developed by <span className="font-bold">@harsh</span></p>
   </>)
 }
 export default Form
