@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-
+import DateEdit from './DateEdit';
 const Form=(
   {
     sensexProfit, setSensexProfit,
@@ -17,31 +17,39 @@ const Form=(
     finniftyColor, setFinniftyColor,
     finniftyExp, setFinniftyExp,
     finniftyExpColor, setFinniftyExpColor,
-    orderRange, setOrderRange,
+    selectedIndex, setSelectedIndex,
+    formattedDate, setFormattedDate,
+    quantity, setQuantity,
+    profit, setProfit,
+    lots, setLots,
+    ltp, setLtp,
+    buy, setBuy,
+    sell, setSell,
+    total, setTotal
   })=>{
 
       function sensexHandleChange(){
-        setSensexColor(event.target.value === "Profit" ? "text-[#11af4b]" : "text-red-500");
+        setSensexColor(event.target.value === "Profit" ? "text-[#11af4b]" : "text-red-700/80");
       }
 
       function sensexExpHandleChange(){
-        setSensexExpColor(event.target.value === "Today" ? "bg-green-300/70" : "bg-[#B0C5FC]");
+        setSensexExpColor(event.target.value === "Today" ? "bg-[#e1f2ef]" : "bg-[#e8ebfa]");
       }
 
       function niftyHandleChange(){
-        setNiftyColor(event.target.value === "Profit" ? "text-[#11af4b]" : "text-red-500");
+        setNiftyColor(event.target.value === "Profit" ? "text-[#11af4b]" : "text-red-700/80");
       }
 
       function niftyExpHandleChange(){
-        setNiftyExpColor(event.target.value === "Today" ? "bg-green-300/70" : "bg-[#B0C5FC]");
+        setNiftyExpColor(event.target.value === "Today" ? "bg-[#e1f2ef]" : "bg-[#e8ebfa]");
       }
 
       function finniftyHandleChange(){
-        setFinniftyColor(event.target.value === "Profit" ? "text-[#11af4b]" : "text-red-500");
+        setFinniftyColor(event.target.value === "Profit" ? "text-[#11af4b]" : "text-red-700/80");
       }
 
       function finniftyExpHandleChange(){
-        setFinniftyExpColor(event.target.value === "Today" ? "bg-green-300/70" : "bg-[#B0C5FC]");
+        setFinniftyExpColor(event.target.value === "Today" ? "bg-[#e1f2ef]" : "bg-[#e8ebfa]");
       }
   
   return(<>
@@ -74,7 +82,7 @@ const Form=(
     <input
       type="radio"
       value="Loss"
-      checked={sensexColor === "text-red-500"}
+      checked={sensexColor === "text-red-700/80"}
       onChange={sensexHandleChange}/>
         Loss
     </label>
@@ -89,7 +97,7 @@ const Form=(
     <input
       type="radio"
       value="Today"
-      checked={sensexExpColor === "bg-green-300/70" }
+      checked={sensexExpColor === "bg-[#e1f2ef]" }
       onChange={sensexExpHandleChange}/>
         Today
     </label>
@@ -97,7 +105,7 @@ const Form=(
     <input
       type="radio"
       value="Other"
-      checked={sensexExpColor === "bg-[#B0C5FC]"}
+      checked={sensexExpColor === "bg-[#e8ebfa]"}
       onChange={sensexExpHandleChange}/>
         Other
     </label><br/><hr/>
@@ -129,7 +137,7 @@ const Form=(
     <input
       type="radio"
       value="Loss"
-      checked={niftyColor === "text-red-500"}
+      checked={niftyColor === "text-red-700/80"}
       onChange={niftyHandleChange}/>
         Loss
     </label>
@@ -144,7 +152,7 @@ const Form=(
     <input
       type="radio"
       value="Today"
-      checked={niftyExpColor === "bg-green-300/70" }
+      checked={niftyExpColor === "bg-[#e1f2ef]" }
       onChange={niftyExpHandleChange}/>
         Today
     </label>
@@ -152,7 +160,7 @@ const Form=(
     <input
       type="radio"
       value="Other"
-      checked={niftyExpColor === "bg-[#B0C5FC]"}
+      checked={niftyExpColor === "bg-[#e8ebfa]"}
       onChange={niftyExpHandleChange}/>
         Other
     </label><br/><hr/>
@@ -184,7 +192,7 @@ const Form=(
     <input
       type="radio"
       value="Loss"
-      checked={finniftyColor === "text-red-500"}
+      checked={finniftyColor === "text-red-700/80"}
       onChange={finniftyHandleChange}/>
         Loss
     </label>
@@ -199,7 +207,7 @@ const Form=(
     <input
       type="radio"
       value="Today"
-      checked={finniftyExpColor === "bg-green-300/70" }
+      checked={finniftyExpColor === "bg-[#e1f2ef]" }
       onChange={finniftyExpHandleChange}/>
         Today
     </label>
@@ -207,26 +215,72 @@ const Form=(
     <input
       type="radio"
       value="Other"
-      checked={finniftyExpColor === "bg-[#B0C5FC]"}
+      checked={finniftyExpColor === "bg-[#e8ebfa]"}
       onChange={finniftyExpHandleChange}/>
         Other
     </label><br/><hr/><br/>
 
+    {/* ORDER */}
+    <label className="bg-gray-400 text-black rounded-md p-2 w-1/3 text-center">ORDER</label>
+    <div className="flex flex-col gap-2 w-1/2">
+    <select 
+      className="border-2 p-1 w-1/2 rounded-md shadow-md focus:outline-none focus:bg-green-100"
+      value={selectedIndex} 
+      onChange={(e)=>setSelectedIndex(e.target.value)}>
+        <option value="">-- Select --</option>
+        <option value="SENSEX">SENSEX</option>
+        <option value="NIFTY">NIFTY</option>
+        <option value="FINNIFTY">FINNIFTY</option>
+      </select>
+      <DateEdit formattedDate={formattedDate} setFormattedDate={setFormattedDate}/>
+      <input 
+        type="text"
+        placeholder="Quantity"
+        value={quantity}
+        onChange={(e)=>setQuantity(e.target.value)}
+        className="border-2 p-1  rounded-md shadow-md focus:outline-none focus:bg-green-100"/>
+      <input 
+        type="text"
+        placeholder="Profit"
+        value={profit}
+        onChange={(e)=>setProfit(e.target.value)}
+        className="border-2 p-1  rounded-md shadow-md focus:outline-none focus:bg-green-100"/>
+      <input 
+        type="text"
+        placeholder="Lots"
+        value={lots}
+        onChange={(e)=>setLots(e.target.value)}
+        className="border-2 p-1  rounded-md shadow-md focus:outline-none focus:bg-green-100"/>
+      <input 
+        type="text"
+        placeholder="ltp"
+        value={ltp}
+        onChange={(e)=>setLtp(e.target.value)}
+        className="border-2 p-1  rounded-md shadow-md focus:outline-none focus:bg-green-100"/>
+      <input 
+        type="text"
+        placeholder="buy"
+        value={buy}
+        onChange={(e)=>setBuy(e.target.value)}
+        className="border-2 p-1  rounded-md shadow-md focus:outline-none focus:bg-green-100"/>
+      <input 
+        type="text"
+        placeholder="sell"
+        value={sell}
+        onChange={(e)=>setSell(e.target.value)}
+        className="border-2 p-1  rounded-md shadow-md focus:outline-none focus:bg-green-100"/>
+    </div>
 
-    {/* ORDERS */}
-    <label className="bg-gray-400 text-black rounded-md p-2 w-1/3 text-center">ORDERS</label>
+    {/* TOTAL */}
+    <label className="bg-gray-400 text-black rounded-md p-2 w-1/3 text-center">TOTAL</label>
     <div className="flex gap-2">
       <input
-        type="range"
-        min={0}
-        max={3}
-        value={orderRange}
-        onChange={(e)=>setOrderRange(e.target.value)}
+        type="text"
+        value={total}
+        onChange={(e)=>setTotal(e.target.value)}
         className="border-2 p-1  rounded-md shadow-md focus:outline-none focus:bg-green-100"
       />
     </div>
-    {/* INPUT FEILD ACCORDING TO THE RANGE */}
-
   </form>
   </>)
 }

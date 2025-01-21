@@ -15,21 +15,30 @@ const[sensexProfit , setSensexProfit] = useState("77,087.99");
 const[sensexPer , setSensexPer] = useState("+468.66(+0.61%)");
 const[sensexColor , setSensexColor] = useState("[#11af4b]");
 const[sensexExp , setSensexExp] = useState("Expiring Tomorrow");
-const[sensexExpColor , setSensexExpColor] = useState("bg-green-300/70");
+const[sensexExpColor , setSensexExpColor] = useState("bg-[#e1f2ef]");
     // NIFTY
 const[niftyProfit , setNiftyProfit] = useState("77,087.99");
 const[niftyPer , setNiftyPer] = useState("+468.66(+0.61%)");
 const[niftyColor , setNiftyColor] = useState("[#11af4b]");
 const[niftyExp , setNiftyExp] = useState("Expiring Tomorrow");
-const[niftyExpColor , setNiftyExpColor] = useState("bg-green-300/70");
+const[niftyExpColor , setNiftyExpColor] = useState("bg-[#e1f2ef]");
     // FINNIFTY
 const[finniftyProfit , setFinniftyProfit] = useState("77,087.99");
 const[finniftyPer , setFinniftyPer] = useState("+468.66(+0.61%)");
 const[finniftyColor , setFinniftyColor] = useState("[#11af4b]");
 const[finniftyExp , setFinniftyExp] = useState("Expiring Tomorrow");
-const[finniftyExpColor , setFinniftyExpColor] = useState("bg-green-300/70");
+const[finniftyExpColor , setFinniftyExpColor] = useState("bg-[#e1f2ef]");
     //ORDER RANGE
-const[orderRange , setOrderRange] = useState(0);
+const[selectedIndex , setSelectedIndex] = useState("SENSEX");
+const[formattedDate, setFormattedDate] = useState("");
+const[quantity , setQuantity] = useState("23300 PE");
+const[profit , setProfit] = useState("31,000");
+const[lots , setLots] = useState("21");
+const[ltp , setLtp] = useState("202.25 (3.96%)");
+const[buy , setBuy] = useState("172.34");
+const[sell , setSell] = useState("192.57");
+    // TOTAL
+const[total , setTotal] = useState("69");
 
 
 const[themeMode , setThemeMode] = useState("light");
@@ -144,13 +153,20 @@ const[themeMode , setThemeMode] = useState("light");
                 finniftyColor={finniftyColor}
                 finniftyExp={finniftyExp}
                 finniftyExpColor={finniftyExpColor}
-
-                orderRange={orderRange}
             />
             <Sections/>
             <Filter/>
-            <Order/>
-            <TotalBar/>
+            <Order 
+                selectedIndex={selectedIndex}
+                formattedDate={formattedDate}
+                quantity={quantity}
+                profit={profit}
+                lots={lots}
+                ltp={ltp}
+                buy={buy}
+                sell={sell}
+                />
+            <TotalBar total={total}/>
             <Footer/>    
         </div>
             <Form 
@@ -184,10 +200,27 @@ const[themeMode , setThemeMode] = useState("light");
                 setFinniftyExp={setFinniftyExp}
                 finniftyExpColor={finniftyExpColor}
                 setFinniftyExpColor={setFinniftyExpColor}
-
-                orderRange={orderRange}
-                setOrderRange={setOrderRange}
                 
+                selectedIndex={selectedIndex}
+                setSelectedIndex={setSelectedIndex}
+                
+                formattedDate={formattedDate}
+                setFormattedDate={setFormattedDate}
+                quantity={quantity}
+                setQuantity={setQuantity}
+                profit={profit}
+                setProfit={setProfit}
+                lots={lots}
+                setLots={setLots}
+                ltp={ltp}
+                setLtp={setLtp}
+                buy={buy}
+                setBuy={setBuy}
+                sell={sell}
+                setSell={setSell}
+
+                total={total}
+                setTotal={setTotal}
                 />
     </ThemeProvider>
     </>

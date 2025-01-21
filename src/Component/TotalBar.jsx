@@ -6,7 +6,7 @@ const TotalBar = ({ total }) => {
         <p className="text-[16px]">Total</p>
       </div>
       <div>
-        <p className="text-[13px] font-bold">+₹13,200.00 <i className="fa-solid fa-angle-up"></i></p>
+        <p className="text-[13px] font-bold">+₹{total} <i className="fa-solid fa-angle-up"></i></p>
         <p></p>
       </div>
     </div>
