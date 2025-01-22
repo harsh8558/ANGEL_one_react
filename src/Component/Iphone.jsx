@@ -5,7 +5,7 @@ const Iphone = () =>{
                 <div className="text-[14px] font-bold pl-8 font-sans">2:23</div>
                 <div className="flex gap-2 justify-center items-center  pr-8">
                     <div className="">
-                        <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/high-connection.png" alt="high-connection"/>
+                    <img width="15" height="15" src="https://img.icons8.com/fluency-systems-filled/48/high-connection--v1.png" alt="high-connection--v1"/>
                     </div>
                     <div>
                         <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/wifi--v1.png" alt="wifi--v1"/>
