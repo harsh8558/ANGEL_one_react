@@ -6,7 +6,11 @@ export default {
   ],
   darkMode:"class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        barlow: ['Barlow', 'sans-serif'], // Custom font class
+      },
+    },
   },
   plugins: [],
 }

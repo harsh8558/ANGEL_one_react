@@ -32,7 +32,7 @@ const[finniftyExpColor , setFinniftyExpColor] = useState("bg-[#e1f2ef]");
 const[selectedIndex , setSelectedIndex] = useState("SENSEX");
 const[formattedDate, setFormattedDate] = useState("");
 const[quantity , setQuantity] = useState("23300 PE");
-const[profit , setProfit] = useState("31,000");
+const[profit , setProfit] = useState("31,000.00");
 const[lots , setLots] = useState("21");
 const[ltp , setLtp] = useState("202.25 (3.96%)");
 const[buy , setBuy] = useState("172.34");
@@ -56,86 +56,8 @@ const[themeMode , setThemeMode] = useState("light");
 
   return (
     <>
-      {/* <div className="header-container">
-        <div className="d-flex justify-content-between align-items-center">
-            <div className="header-tabs "  >
-                <span>Orders</span>
-                <span className="active">Positions</span>
-            </div>
-            <div className="d-flex">
-                <div className="icon-button">
-                    <i className="fas fa-search"></i>
-                </div>
-                <div className="icon-button">
-                    <i className="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div className="market-data-container">
-        <div className="market-item">
-            <div className="market-title">NIFTY</div>
-            <div className="market-value" style={{color: '#1e8121e1', fontWeight: '550'}}>
-                23,344.75 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>+141.55 (+0.61%)</span>
-            </div>
-        </div>
-        <div className="market-item">
-            <div className="market-title">BANKNIFTY</div>
-            <div className="market-value" style={{color: '#1e8121e1' , fontWeight: '550'}}>
-                49,350.80 <span className="market-change" style={{color: '#666666f0' , fontWeight: '100'}}>+810.20 (+1.67%)</span>
-            </div>
-        </div>
-
-        <div className="market-item">
-            <div className="market-title">FINNIFTY</div>
-            <div className="market-value" style={{color: '#1e8121e1', fontWeight: '550'}}>
-                22,926.70 <span className="market-change" style={{color: '#666666f0', fontWeight: '100'}}>+318.50 (+1.41%)</span>
-            </div>
-        </div>
-    </div>
-    <div className="sort-icon-container">
-        <img src="https://res.cloudinary.com/dxmu1ohyk/image/upload/v1737362794/drpmcmwo31yoeqaz6hf1.jpg" alt="Sort" className="sort-icon"/>
-    </div>
-    <div className="position-card">
-        <div className="d-flex justify-content-between">
-            <div>
-                <div className="position-title">SENSEX <span style={{fontSize: '13px'}}>21-Jan-25</span> 76700 CE</div>
-                <div className="position-details">325 Lots • <span className="tag">CF</span></div>
-                <div className="position-details">Buy 362.52</div>
-            </div>
-            <div className="text-end">
-                <div className="profit">+18,03,620.00</div>
-                <div className="ltp-value">LTP 485.60 (26.60%)</div>
-                <div className="position-details">Sell 640.00</div>
-            </div>
-        </div>
-    </div>
-    <div className="bottom-nav">
-        <div className="d-flex justify-content-around">
-            <a href="#" className="nav-item">
-                <i className="fas fa-home"></i>
-                <span>HOME</span>
-            </a>
-            <a href="#" className="nav-item">
-                <i className="fas fa-star"></i>
-                <span>WATCHLIST</span>
-            </a>
-            <a href="#" className="nav-item">
-                <i className="fas fa-folder"></i>
-                <span>PORTFOLIO</span>
-            </a>
-            <a href="#" className="nav-item active">
-                <i className="fas fa-shopping-bag"></i>
-                <span>ORDERS</span>
-            </a>
-            <a href="#" className="nav-item">
-                <i className="fas fa-user"></i>
-                <span>ACCOUNT</span>
-            </a>
-        </div>
-    </div> */}
     <ThemeProvider value={{themeMode,darkTheme,lightTheme}}>
-        <div className="dark:bg-slate-700 h-screen">
+        <div className="dark:bg-slate-700 h-screen bg-slate-100">
             <Nav/>
             <Index 
                 sensexProfit={sensexProfit}
@@ -154,7 +76,7 @@ const[themeMode , setThemeMode] = useState("light");
                 finniftyExp={finniftyExp}
                 finniftyExpColor={finniftyExpColor}
             />
-            <Sections/>
+            {/* <Sections/> */}
             <Filter/>
             <Order 
                 selectedIndex={selectedIndex}

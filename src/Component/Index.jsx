@@ -7,7 +7,7 @@ const Index = (
   console.log(sensexProfit)
   console.log(sensexColor)
   return(<>
-    <div className="flex h-14 w-full border-2 dark:border-slate-600/30 overflow-x-auto dark:bg-slate-700">
+    <div className="flex h-14 w-full border-2 dark:border-slate-600/30 overflow-x-auto dark:bg-slate-700 font-sans">
       <div className="flex flex-col p-2 w-48 border-r-2 dark:border-slate-600/50  border-gray-200 gap-1 text-[12px]">
           <div className="flex justify-between dark:text-gray-100 text-gray-600">
             <p className="font-bold ">SENSEX</p>
