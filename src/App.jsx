@@ -9,6 +9,7 @@ import { ThemeProvider } from "./Context/theme"
 import { useEffect, useState } from 'react'
 import Form from './Component/Form'
 import Order from './Component/Order'
+import Iphone from './Component/Iphone'
 function App() {
     // SENSEX
 const[sensexProfit , setSensexProfit] = useState("77,087.99");
@@ -58,6 +59,7 @@ const[themeMode , setThemeMode] = useState("light");
     <>
     <ThemeProvider value={{themeMode,darkTheme,lightTheme}}>
         <div className="dark:bg-slate-700 h-screen bg-slate-100">
+            <Iphone/>
             <Nav/>
             <Index 
                 sensexProfit={sensexProfit}
