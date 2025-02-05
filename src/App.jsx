@@ -9,6 +9,7 @@ import { ThemeProvider } from "./Context/theme"
 import { useEffect, useState } from 'react'
 import Form from './Component/Form'
 import Order from './Component/Order'
+
 function App() {
     // SENSEX
 const[sensexProfit , setSensexProfit] = useState("77,087.99");
@@ -22,6 +23,12 @@ const[niftyPer , setNiftyPer] = useState("+468.66(+0.61%)");
 const[niftyColor , setNiftyColor] = useState("[#11af4b]");
 const[niftyExp , setNiftyExp] = useState("Expiring Tomorrow");
 const[niftyExpColor , setNiftyExpColor] = useState("bg-[#e1f2ef]");
+    // BANKNIFTY
+const[bankNiftyProfit , setBankNiftyProfit] = useState("77,087.99");
+const[bankNiftyPer , setBankNiftyPer] = useState("+468.66(+0.61%)");
+const[bankNiftyColor , setBankNiftyColor] = useState("[#11af4b]");
+const[bankNiftyExp , setBankNiftyExp] = useState("Expiring Tomorrow");
+const[bankNiftyExpColor , setBankNiftyExpColor] = useState("bg-[#e1f2ef]");
     // FINNIFTY
 const[finniftyProfit , setFinniftyProfit] = useState("77,087.99");
 const[finniftyPer , setFinniftyPer] = useState("+468.66(+0.61%)");
@@ -65,11 +72,19 @@ const[themeMode , setThemeMode] = useState("light");
                 sensexColor={sensexColor}
                 sensexExp={sensexExp}
                 sensexExpColor={sensexExpColor}
+
                 niftyProfit={niftyProfit}
                 niftyPer={niftyPer}
                 niftyColor={niftyColor}
                 niftyExp={niftyExp}
                 niftyExpColor={niftyExpColor}
+
+                bankNiftyProfit={bankNiftyProfit}
+                bankNiftyPer={bankNiftyPer}
+                bankNiftyColor={bankNiftyColor}
+                bankNiftyExp={bankNiftyExp}
+                bankNiftyExpColor={bankNiftyExpColor}
+
                 finniftyProfit={finniftyProfit}
                 finniftyPer={finniftyPer}
                 finniftyColor={finniftyColor}
@@ -102,6 +117,7 @@ const[themeMode , setThemeMode] = useState("light");
                 setSensexExp={setSensexExp}
                 sensexExpColor={sensexExpColor}
                 setSensexExpColor={setSensexExpColor}
+
                 niftyProfit={niftyProfit}
                 setNiftyProfit={setNiftyProfit}
                 niftyPer={niftyPer}
@@ -112,6 +128,18 @@ const[themeMode , setThemeMode] = useState("light");
                 setNiftyExp={setNiftyExp}
                 niftyExpColor={niftyExpColor}
                 setNiftyExpColor={setNiftyExpColor}
+
+                bankNiftyProfit={bankNiftyProfit}
+                setBankNiftyProfit={setBankNiftyProfit}
+                bankNiftyPer={bankNiftyPer}
+                setBankNiftyPer={setBankNiftyPer}
+                bankNiftyColor={bankNiftyColor}
+                setBankNiftyColor={setBankNiftyColor}
+                bankNiftyExp={bankNiftyExp}
+                setBankNiftyExp={setBankNiftyExp}
+                bankNiftyExpColor={bankNiftyExpColor}
+                setBankNiftyExpColor={setBankNiftyExpColor}
+
                 finniftyProfit={finniftyProfit}
                 setFinniftyProfit={setFinniftyProfit}
                 finniftyPer={finniftyPer}

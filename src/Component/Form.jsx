@@ -12,6 +12,11 @@ const Form=(
     niftyColor, setNiftyColor,
     niftyExp, setNiftyExp,
     niftyExpColor, setNiftyExpColor,
+    bankNiftyProfit, setBankNiftyProfit,
+    bankNiftyPer, setBankNiftyPer,
+    bankNiftyColor, setBankNiftyColor,
+    bankNiftyExp, setBankNiftyExp,
+    bankNiftyExpColor, setBankNiftyExpColor,
     finniftyProfit, setFinniftyProfit,
     finniftyPer, setFinniftyPer,
     finniftyColor, setFinniftyColor,
@@ -42,6 +47,14 @@ const Form=(
 
       function niftyExpHandleChange(){
         setNiftyExpColor(event.target.value === "Today" ? "bg-[#e1f2ef]" : "bg-[#e8ebfa]");
+      }
+
+      function bankNiftyHandleChange(){
+        setBankNiftyColor(event.target.value === "Profit" ? "text-[#11af4b]" : "text-red-700/80");
+      }
+
+      function bankNiftyExpHandleChange(){
+        setBankNiftyExpColor(event.target.value === "Today" ? "bg-[#e1f2ef]" : "bg-[#e8ebfa]");
       }
 
       function finniftyHandleChange(){
@@ -165,6 +178,62 @@ const Form=(
         Other
     </label><br/><hr/>
 
+    {/*BANK NIFTY */}
+    <label className="bg-gray-400 text-black rounded-md p-2 w-1/4 text-center">BANK NIFTY</label>
+    <input 
+      type="text" 
+      placeholder="bank nifty profit"
+      value={bankNiftyProfit}
+      onChange={(e)=>setBankNiftyProfit(e.target.value)}
+      className="border-2 p-1 w-1/2 rounded-md shadow-md focus:outline-none focus:bg-green-100"/>
+    <input 
+      type="text" 
+      placeholder="bank nifty percentage"
+      value={bankNiftyPer}
+      onChange={(e)=>setBankNiftyPer(e.target.value)}
+      className="border-2 p-1 w-1/2 rounded-md shadow-md focus:outline-none focus:bg-green-100"/>
+      <h3>Choose One</h3>
+    <label>
+    <input
+      type="radio"
+      value="Profit"
+      checked={bankNiftyColor === "text-[#11af4b]"}
+      onChange={bankNiftyHandleChange}/>
+        Profit
+    </label>
+    <label>
+    <input
+      type="radio"
+      value="Loss"
+      checked={bankNiftyColor === "text-red-700/80"}
+      onChange={bankNiftyHandleChange}/>
+        Loss
+    </label>
+    <input 
+      type="text" 
+      placeholder="Bank Nifty Expiry"
+      value={bankNiftyExp}
+      onChange={(e)=>setBankNiftyExp(e.target.value)}
+      className="border-2 p-1 w-1/2 rounded-md shadow-md focus:outline-none focus:bg-green-100"/>
+      <h3>Expery Day</h3>
+    <label>
+    <input
+      type="radio"
+      value="Today"
+      checked={bankNiftyExpColor === "bg-[#e1f2ef]" }
+      onChange={bankNiftyExpHandleChange}/>
+        Today
+    </label>
+    <label>
+    <input
+      type="radio"
+      value="Other"
+      checked={bankNiftyExpColor === "bg-[#e8ebfa]"}
+      onChange={bankNiftyExpHandleChange}/>
+        Other
+    </label><br/><hr/>
+    
+
     {/* FINNIFTY */}
     <label className="bg-gray-400 text-black rounded-md p-2 w-1/3 text-center">FINNIFTY</label>
     <input 
@@ -231,6 +300,7 @@ const Form=(
         <option value="SENSEX">SENSEX</option>
         <option value="NIFTY">NIFTY</option>
         <option value="FINNIFTY">FINNIFTY</option>
+        <option value="BANK NIFTY">BANK NIFTY</option>
       </select>
       <DateEdit formattedDate={formattedDate} setFormattedDate={setFormattedDate}/>
       <input 

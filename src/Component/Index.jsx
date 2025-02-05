@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 const Index = (
     {sensexProfit, sensexPer, sensexColor, sensexExp, sensexExpColor,
       niftyProfit, niftyPer, niftyColor, niftyExp, niftyExpColor,
+      bankNiftyProfit, bankNiftyPer, bankNiftyColor, bankNiftyExp, bankNiftyExpColor,
       finniftyProfit, finniftyPer, finniftyColor, finniftyExp, finniftyExpColor
     }) => {
   console.log(sensexProfit)
@@ -30,6 +31,18 @@ const Index = (
             <i className={`fa-solid fa-sort-up ${niftyColor==="text-[#11af4b]"?"mt-1":"rotate-180 -mt-1"}` }></i>
             </p>
             <p className="text-gray-600 dark:text-gray-100">{niftyPer}</p>
+          </div>
+      </div>
+      <div className="flex flex-col p-2 w-48 border-r-2 dark:border-slate-600/50 border-gray-200 gap-1 text-[12px]">
+          <div className="flex justify-between dark:text-gray-100 text-gray-600">
+            <p className="font-bold">BANKNIFTY</p>
+            <p className={`${bankNiftyExpColor} px-1 flex items-center text-[8px] `}>{bankNiftyExp}</p> 
+          </div>
+          <div className="flex justify-between gap-2">
+            <p className={`${bankNiftyColor} font-bold flex items-center justify-center gap-1`}>{bankNiftyProfit}
+            <i className={`fa-solid fa-sort-up ${bankNiftyColor==="text-[#11af4b]"?"mt-1":"rotate-180 -mt-1"}` }></i>
+            </p>
+            <p className="text-gray-600 dark:text-gray-100">{bankNiftyPer}</p>
           </div>
       </div>
       <div className="flex flex-col p-2 w-48 border-r-2 dark:border-slate-600/50   border-gray-200 gap-1 text-[12px]">
