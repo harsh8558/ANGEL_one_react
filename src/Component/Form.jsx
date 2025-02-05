@@ -300,7 +300,7 @@ const Form=(
         <option value="SENSEX">SENSEX</option>
         <option value="NIFTY">NIFTY</option>
         <option value="FINNIFTY">FINNIFTY</option>
-        <option value="BANK NIFTY">BANK NIFTY</option>
+        <option value="BANKNIFTY">BANKNIFTY</option>
       </select>
       <DateEdit formattedDate={formattedDate} setFormattedDate={setFormattedDate}/>
       <input 
